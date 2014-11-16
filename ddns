@@ -63,14 +63,19 @@
 #########################################################
 
 config service "myddns"
-	option enabled		"0"
-	option interface	"wan"
+	option enabled		"1"
+	#duckdns
+	#option interface	"wan"
 	option use_syslog	"1"
 
-	option service_name	"dyndns.org"
-	option domain		"mypersonaldomain.dyndns.org"
-	option username		"myusername"
-	option password		"mypassword"	
+	#duckdns
+	option service_name	"duckdns.org"
+	#duckdns
+	option domain		"ow189"
+	#duckdns
+	option username		"NA"
+	#duckdns
+	option password		"30dbf6a3-dc39-4432-b31e-5a8356ae8f65"	
 	option use_https	"0"
 
 	option force_interval	"72"
@@ -80,8 +85,10 @@ config service "myddns"
 	option retry_interval	"60"
 	option retry_unit	"seconds"
 
-	#option ip_source	"network" 
-	#option ip_network	"wan"
+	#duckdns
+	option ip_source	"network"
+	#duckdns 
+	option ip_network	"wan"
 
 	#option ip_source	"interface"
 	#option ip_interface	"eth0.1"
@@ -92,6 +99,7 @@ config service "myddns"
 	option ip_source	"web"
 	option ip_url		"http://checkip.dyndns.com/"
 
-	#option update_url	"http://[USERNAME]:[PASSWORD]@members.dyndns.org/nic/update?hostname=[DOMAIN]&myip=[IP]"
+	#duckdns
+	option update_url	"http://duckdns.org/update?domains=[DOMAIN]&token=[PASSWORD]&ip=[IP]"
 
 
